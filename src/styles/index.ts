@@ -18,6 +18,13 @@ export const { styled, getCssText, globalCss } = createStitches({
       lg: '1.25rem',
       xl: '1.5rem',
       '2xl': '2rem',
-    }
+    },
+    media: {
+      sm: '(min-width: 640px)',
+      md: '(min-width: 768px)',
+      lg: '(min-width: 1024px)',
+      xl: '(min-width: 1280px)',
+      '2xl': '(min-width: 1536px)',
+    },
   }
 })
