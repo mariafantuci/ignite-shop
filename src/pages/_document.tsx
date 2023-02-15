@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-title-in-document-head */
 import { Html, Head,  Main, NextScript } from 'next/document'
 import { getCssText } from '../styles'
 
@@ -8,7 +9,11 @@ export default function Document() {
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+                
+                <link rel="icon" type="image/x-icon" href="../../../assets/favicon.svg" />
+
                 <style id="stitches" dangerouslySetInnerHTML={{ __html: getCssText() }} />
+                <title>Ignite Shop</title>
             </Head>
             <body>
                 <Main />
