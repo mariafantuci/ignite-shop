@@ -1,6 +1,7 @@
 import { styled } from '../styles'
+
 const Button = styled('button', {
-  backgroundColor: 'black',
+  backgroundColor: '$green300',
   color: 'white',
   borderRadius: 4,
   border: 0,
@@ -11,8 +12,9 @@ const Button = styled('button', {
   }
 
 })
+
 export default function Home() {
   return (
-    <h1>Teste</h1>
+    <Button>Teste</Button>
   )
 }
