@@ -9,6 +9,7 @@ import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
 
 import Stripe from 'stripe';
+import { priceFormatter } from '../utils/formatter';
 
 interface HomeProps{
   products: {
@@ -62,7 +63,7 @@ export const getStaticProps: GetStaticProps = async () => {
         description: product.description,
         imageUrl: product.images[0],
         url: product.url,
-        price: price.unit_amount! / 100,
+        price: priceFormatter.format(price.unit_amount! / 100),
 
     }
   })
