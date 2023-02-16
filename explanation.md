@@ -7,3 +7,7 @@ roteamento baseados em arquivos físicos, ou seja com base no nome do arquivo de
 ## _document.tsx
 para adicionar estilos globais ou modificar algo global, já que não tem o arquivo index
 é necessário criar esse arquivo dentro de pages. Ele é um componente.
+
+// Client-side (useEffect)
+// getServerSideProps
+// getStaticProps
