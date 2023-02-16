@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
 import Stripe from 'stripe'
@@ -38,8 +39,12 @@ export default function Product({ product }: ProductProps){
       alert('Falha ao redirecionar ao checkout!')
     }
   }
-  
+
     return (
+      <>
+        <Head>
+          <title>{product.name} | Ignite Shop</title>
+        </Head>
         <ProductContainer>
           <ImageContainer>
             <Image width={520} height={480} src={product.imageUrl} alt="" />
@@ -56,6 +61,7 @@ export default function Product({ product }: ProductProps){
             </button>
           </ProductDetails>
         </ProductContainer>
+      </>
     )
 }
 export const getStaticPaths: GetStaticPaths = async () => {
