@@ -17,10 +17,9 @@ interface HomeProps{
   products: {
     id: string,
     name: string,
-    description: string,
     imageUrl: string,
     url: string,
-    price: number,
+    price: string,
   }[]
 }
 
@@ -67,7 +66,6 @@ export const getStaticProps: GetStaticProps = async () => {
     return{
         id: product.id,
         name: product.name,
-        description: product.description,
         imageUrl: product.images[0],
         url: product.url,
         price: priceFormatter.format(price.unit_amount! / 100),
